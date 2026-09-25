@@ -28,8 +28,9 @@ class StoryBase(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
 
-class CreateStoryRequest(StoryBase):
+class CreateStoryRequest(BaseModel):
     theme: str
+    model_config = ConfigDict(from_attributes=True)
 
 
 class CompleteStoryResponse(StoryBase):
