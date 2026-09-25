@@ -8,9 +8,9 @@ class StoryJobBase(BaseModel):
 
 
 class StoryJobResponse(BaseModel):
-    job_id: int
+    job_id: str
     status: str
-    create_at: datetime
+    created_at: datetime
     story_id: int | None = None
     completed_at: datetime | None = None
     error: str | None = None
