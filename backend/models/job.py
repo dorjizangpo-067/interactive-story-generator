@@ -20,6 +20,6 @@ class StoryJob(Base):
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now()
     )
-    completed_job: Mapped[datetime] = mapped_column(
+    completed_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), nullable=True
     )
