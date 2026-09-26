@@ -1,4 +1,4 @@
-from pydantic import field_validator
+from pydantic import SecretStr, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -9,7 +9,7 @@ class Settings(BaseSettings):
     DEBUG: bool = False
 
     ALLOWED_ORIGIN: str
-    OPEN_API_KEY: str
+    GOOGLE_API_KEY: SecretStr
 
     @field_validator("ALLOWED_ORIGIN")
     def prase_allowed_origin(cls, v: str) -> list[str]:
